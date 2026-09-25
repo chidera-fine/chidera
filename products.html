@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products |Fish Mongers Limited</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com"crossorigin> 
+ <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"  rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <span>FM</span>
+                <div>
+                    <strong>Fish Mongers</strong>
+                    <small>Limited</small>
+                </div>
+            </a>
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html"  class="active">Products</a>
+        <a href="info.html">Info</a>
+        <a href="contact.html">Contact</a>
+            </nav>
+            <a href="#shop" class="header-button">Shop Now</a>
+            <button class="menu-btn" id="menuBtn">&#8801;</button>
+        </header>
+        <main>
+            <section class="page-hero">
+                <p class="eyebrow">OUR PRODUCTS</p>
+                <h1>Choose what you need. We'll handle the rest</h1>
+                <p>Add products to your order, select your quantities and send the request directly to our whatsapp</p>
+            </section>
+            <section class="shop-section" id="shop">
+                <div class="shop-heading">
+                    <div>
+                        <p class="eyebrow">
+                            SHOP
+                        </p>
+                        <h2>Available Products</h2>
+                    </div>
+                    <div class="cart-count">
+                        <span id="cardCount">0</span>
+                        Items Selected
+                    </div>
+                </div>
+                <div class="shop-grid">
+                    <article class="shop-card">
+                        <div class="shop-image">
+                            <img src="bournvuta.jpg" alt="Bournvita">
+                        </div>
+                        <div class="shop-content">
+                            <span class="product-category">CHOCOLATE DRINK</span>
+                            <h3>Cadbury Bournvita</h3>
+                            <p>Hot Chocolate Drink for homes, consumers and businesses</p>
+                            <div class="quantity-box">
+                                <label for="bournvitaQty">Quantity</label>
+                                <input type="number" id="bournvitaQty" min="0" value="0" data-product="Cadbury Bournvita">
+                            </div>
+                            <button class="add-btn" onclick="addProduct('cadburyBournvita', 'bournvitaQty')">Add to Order</button>
+                        </div>
+                    </article>
+                    <article class="shop-card">
+                        <div class="shop-image">
+                            <img src="cloret.jpg.jpg" alt="Clorets Chewing Gum">
+                        </div>
+                        <div class="shop-content">
+                            <span class="product-category">CHEWING Gum</span>
+                            <h3>Clorets</h3>
+                            <p>Everyday breath fresher suitable for retail and personal purchase</p>
+                            <div class="quantity-box">
+                                <label for="cloretsQty">Quantity</label>
+                                <input type="number" id="cloretsQty" min="0" value="0" data-product="Clorets">
+                            </div>
+                            <button class="add-btn" onclick="addProduct('Clorets', 'cloretsQty')">Add to Order</button>
+                        </div>
+                    </article>
+                    <article class="shop-card">
+                        <div class="shop-image">
+                            <img src="detergent.jpg.jpg" alt="Goodmama">
+                        </div>
+                        <div class="shop-content">
+                            <span class="product-category">HOUSEHOLD</span>
+                            <h3>Goodmama</h3>
+                            <p>A household product supplies through our distribution service</p>
+                             <div class="quantity-box">
+                                <label for="goodmamaQty">Quantity</label>
+                                <input type="number" id="goodmamaQty" min="0" value="0" data-product="Good Mama">
+                            </div>
+                            <button class="add-btn" onclick="addProduct('Good Mama', 'goodmamaQty')">Add to Order</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="order-box" id="orderBox">
+                    <div>
+                        <p class="eyebrow">YOUR ORDER</p>
+                        <h2>Review before sending</h2>
+                    </div>
+                    <div id="orderList" class="order-list">
+                        <p class="empty-order">You haven't selected any products yet</p>
+                    </div>
+                    <div class="customer-details">
+                        <h3>Your Details</h3>
+                        <div class="form-group">
+                            <label for="customerName">Name</label>
+                            <input type="text" id="customerName" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone number</label>
+                            <input type="tel" id="customerPhone" placeholder="0812345678">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerNote">Additional note</label>
+                            <textarea id="customerNote" rows="4" placeholder="Tell us anything we should know about your order..."></textarea>
+                        </div>
+                        <button class="whatsapp-btn" onclick="sendOrderToWhatsappp()">Send Order To Whatsapp</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span>FM</span>
+                        <div><strong>Fish Mongers</strong>
+                        <small>Limited</small></div>
+                    </a>
+                    <p>Distribution and supply services based in Transamadi, Port Hacourt</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Company</h4>
+                        <a href="about.html">About</a>
+                        <a href="info.html">Info</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div>
+                        <h4>Products</h4>
+                        <a href="products.html">Bournvita</a>
+                        <a href="products.html">Clorets</a>
+                        <a href="products.html">Goodmama</a>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Transamadi</p>
+                        <p>Port Hacourt</p>
+                        <p>Rivers state</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fish Mongers Limited</p>
+                <a href="contact.html">Get in touch &rarr;</a>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+    </html>
